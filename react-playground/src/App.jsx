@@ -4,6 +4,7 @@
 //So React lets you wrap them in a fragment like <>...</>. Fragments group elements without adding extra HTML tags.
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <h1>Phase 3: My First React Component</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ea.</p>
+      <Footer />
     </>
 
   )
