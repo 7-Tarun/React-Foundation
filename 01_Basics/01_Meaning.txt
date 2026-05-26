@@ -1,5 +1,5 @@
 What is virtual DOM?
-The Virtual DOM (VDOM) is a lightweight, in-memory representation of the real browser DOM, used by React to improve performance. Instead of being a built-in browser feature, it is a simple JavaScript object that mirrors the structure of your website's UI. When data changes, React first updates this "virtual" version instead of the actual screen; it then compares the updated Virtual DOM with a previous snapshot to find exactly what changed. Finally, it sends only those specific changes to the real browser DOM in a single batch, making the update process much faster and more efficient.
+- The Virtual DOM (VDOM) is a lightweight, in-memory representation of the real browser DOM, used by React to improve performance. Instead of being a built-in browser feature, it is a simple JavaScript object that mirrors the structure of your website's UI. When data changes, React first updates this "virtual" version instead of the actual screen; it then compares the updated Virtual DOM with a previous snapshot to find exactly what changed. Finally, it sends only those specific changes to the real browser DOM in a single batch, making the update process much faster and more efficient.
 
 How it Works (Step-by-Step)
 1. Initial Render: React creates a Virtual DOM tree of your entire UI.
@@ -7,3 +7,9 @@ How it Works (Step-by-Step)
 3. Diffing: React compares the new Virtual DOM with a snapshot of the previous one using a diffing algorithm to find exactly what changed.
 4. Reconciliation: This process of syncing the Virtual DOM with the real DOM is called reconciliation.
 5. Batch Update: React applies only the necessary changes to the real DOM in a single batch, rather than re-rendering the whole page.
+
+
+What is React and Vite in short?
+- React handles the user interface (UI). It allows you to build reusable components, manage state, and dynamically render content.
+
+- Vite handles the development environment and building process. It translates modern code features (like TypeScript or JSX) into standard HTML, CSS, and JavaScript that web browsers can actually read.
