@@ -8,6 +8,7 @@ How it Works (Step-by-Step)
 4. Reconciliation: This process of syncing the Virtual DOM with the real DOM is called reconciliation.
 5. Batch Update: React applies only the necessary changes to the real DOM in a single batch, rather than re-rendering the whole page.
 
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 What is React and Vite in short?
 - React handles the user interface (UI). It allows you to build reusable components, manage state, and dynamically render content.

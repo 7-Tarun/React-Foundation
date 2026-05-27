@@ -1,13 +1,14 @@
 //Creating a NavBar in a seperate file.
 
-function Navbar() {
+function Navbar({ userName, cartCount}) {
     return(
         <nav>
-            <h2>Hello World</h2>
+            <h2>I am {userName}</h2>
             <ul>
                 <li>Home</li>
-                <li>Contact</li>
+                <li>Cart: {cartCount}</li>
             </ul>
+            <hr />
         </nav>
     )
 }

@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar cartCount={5} userName="Stephen" />
       <h1>Phase 3: My First React Component</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ea.</p>
       <Footer />

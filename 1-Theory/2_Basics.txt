@@ -1,0 +1,38 @@
+🌟Core Concepts and Topics Covered Inside the src Directory.
+
+-To start the project on your local system, run this command: npm run dev (make sure you are at correct location).
+
+1. App.jsx (The Parent Box)
+-What it is: This is the main, central file of your application.
+-What it does: It does not contain all the detailed code. Instead, it acts as a container that collects all your smaller features and organizes them in one place to build the final page.
+
+2. Components (The Building Blocks)
+-What they are: These are small, separate, and reusable code files (like a Navbar, a Button, or a Footer).
+-What they do: Each component handles its own design and logic inside its own file. You build these pieces separately so you can easily plug them into App.jsx or reuse them across different pages.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+What are Props?
+-Properties(Props) are data inputs for components. Just like normal JavaScript functions take arguments, React components take Props to render dynamic content.
+1. One-Way Data FlowData travels on a strict one-way street. It only flows down from the Parent (like App.jsx) to the Child (like Navbar.jsx), never backward.
+2. Read-OnlyProps are strictly read-only. A Child component can use the received props to display data, but it is not allowed to modify or change them.
+
+Code Example:-
+
+function UserCard(props) {
+  return(
+    <h1> Hello, {props.userName} </h1>;
+  ) 
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+The Problem: Repetitive CodeWriting (props.userName, props.cartCount, and props.theme) repeatedly makes your code long, messy, and ugly when dealing with multiple props.
+The Solution: Destructuring (The Industry Standard)
+Since props are just JavaScript objects behind the scenes, you can use ES6 Object Destructuring to unpack the variables directly inside the function parameters.
+
+Destructuring Code Example:-
+
+function Navbar({ userName, cartCount }) {
+  return <h1>{userName}</h1>;
+}
