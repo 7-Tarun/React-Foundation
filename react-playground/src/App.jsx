@@ -11,9 +11,9 @@ import Footer from './components/Footer'    //Importing Footer file
 
 function App() {
 
-  const [count, setCount] = useState(0);    //Here count is a variable and setCount is a function (function to update the count)
+  const [count, setCount] = useState(0);    //Here count is a variable and setCount is a function (function to update the count). It is a Array Destructuring.
 
-  const btn = () => {       //Using Arrow function to handle button click 
+  const btn = () => {       //Using Arrow function to handle button click, runs when the button is clicked.
     setCount(count + 1);
   }
 
