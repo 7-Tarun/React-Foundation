@@ -15,4 +15,4 @@ function Navbar({ userName, cartCount}) {
 
 export default Navbar
 
-//The next step is to add this file in App.jsx file.
+//The next step is to inport this file in App.jsx file.
