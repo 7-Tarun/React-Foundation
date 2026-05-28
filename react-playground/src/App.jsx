@@ -3,15 +3,26 @@
 //You cannot return two separate tags directly from one component,
 //So React lets you wrap them in a fragment like <>...</>. Fragments group elements without adding extra HTML tags.
 
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+import {useState} from 'react'              //Importing reacts state hook
+import Navbar from './components/Navbar'    //Importing Navbar file
+import Footer from './components/Footer'    //Importing Footer file
 
 function App() {
+
+  const [count, setCount] = useState(0);    //Here count is a variable and setCount is a function (function to update the count)
+
+  const btn = () => {       //Using Arrow function to handle button click 
+    setCount(count + 1);
+  }
+
   return (
     <>
-      <Navbar cartCount={5} userName="Stephen" />
+      <Navbar cartCount={count} userName="Stephen" />
       <h1>Phase 3: My First React Component</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ea.</p>
+      <button onClick={btn}>Add to Cart</button>
       <Footer />
     </>
 
