@@ -1,7 +1,7 @@
 //Creating Footer in a seperate file.
 
 function Footer() {
-    return(
+    return (
         <div>
             <hr />
             <p>Copyright 2026 @All Rights Reserved</p>

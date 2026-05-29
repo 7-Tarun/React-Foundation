@@ -1,7 +1,7 @@
 //Creating a NavBar in a seperate file.
 
-function Navbar({ userName, cartCount}) {
-    return(
+function Navbar({ userName, cartCount }) {
+    return (
         <nav>
             <h2>I am {userName}</h2>
             <ul>

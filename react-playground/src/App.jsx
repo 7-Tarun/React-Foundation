@@ -5,7 +5,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-import {useState} from 'react'              //Importing reacts state hook
+import { useState } from 'react'              //Importing reacts state hook
 import Navbar from './components/Navbar'    //Importing Navbar file
 import Footer from './components/Footer'    //Importing Footer file
 
