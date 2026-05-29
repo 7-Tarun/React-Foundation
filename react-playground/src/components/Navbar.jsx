@@ -1,4 +1,5 @@
 //Creating a NavBar in a seperate file.
+//Using Destructuring to acces data
 
 function Navbar({ userName, cartCount }) {
     return (
