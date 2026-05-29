@@ -1,5 +1,3 @@
-//Creating a NavBar in a seperate file.
-
 function Navbar({ userName, cartCount }) {
     return (
         <nav>
