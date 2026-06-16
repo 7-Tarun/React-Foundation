@@ -13,7 +13,6 @@ function Props (props) {
 }
 
 export default Props
-
 /* Problem in Props:-
 The Problem: Repetitive CodeWriting (props.userName, props.cartCount, and props.theme) repeatedly makes your code long, messy, and ugly when dealing with multiple props.
 The Solution: Destructuring (The Industry Standard)
