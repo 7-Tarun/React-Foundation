@@ -6,6 +6,8 @@ What is this React-Basiscs folder for?
 What is virtual DOM?
 - The Virtual DOM (VDOM) is a lightweight, in-memory representation of the real browser DOM, used by React to improve performance. Instead of being a built-in browser feature, it is a simple JavaScript object that mirrors the structure of your website's UI. When data changes, React first updates this "virtual" version instead of the actual screen; it then compares the updated Virtual DOM with a previous snapshot to find exactly what changed. Finally, it sends only those specific changes to the real browser DOM in a single batch, making the update process much faster and more efficient.
 
+- (Better)In other words: The Virtual DOM is a lightweight JS representation of the Real DOM. When state changes, React creates a new Virtual DOM tree and compares it with the previous Virtual DOM tree — this process is called diffing. Based on the differences found, React updates only those specific nodes in the Real DOM — this step is called reconciliation. This avoids expensive direct DOM manipulation.
+
 How it Works (Step-by-Step)
 1. Initial Render: React creates a Virtual DOM tree of your entire UI.
 2. State Change: When data changes (state or props), React creates a new Virtual DOM tree representing what the UI should look like now.
