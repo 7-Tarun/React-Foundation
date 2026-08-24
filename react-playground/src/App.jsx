@@ -9,5 +9,3 @@ function App() {
 }
 
 export default App
-
-//Execution Flow: index.html  →  main.jsx  →  App.jsx  →  JsxBasics.jsx
