@@ -1,4 +1,4 @@
-What is this React-Basiscs folder for?
+What is this React-Basics folder for?
 - The src folder is the main workplace where all our application's code lives. Inside it, components act as independent building blocks for different parts of the website, while App.jsx serves as the central hub that combines them together to create a single webpage. The React-Basics folder is just a personal sandbox used strictly for practice and taking notes.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
