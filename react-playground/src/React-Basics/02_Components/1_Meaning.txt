@@ -18,3 +18,4 @@ Rules of components:
 6. Hooks must be called at the top level of functional components or custom
    Hooks.
 7. Components can be combined to build larger user interfaces.
+8. Single Responsibility.
