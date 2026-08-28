@@ -1,6 +1,20 @@
-There are two types of components in React: Class components and Functional components.
+Components in React are reusable pieces of UI. They are usually JavaScript
+functions that return JSX.
 
-1. Functional Components- Modern Standard (Everyone use this now)
-2. Class Components- Old Standard (Not used much now)
+Types of components:
+1. Functional components - The modern standard. They can use Hooks for state
+   and other React features.
+2. Class components - The older ES6 class-based approach. They are still
+   supported, but are less common in new code.
 
-~ Class components are legacy, ES6 class-based structures that explicitly manage state and lifecycle events, while functional components are modern, plain JavaScript functions that leverage React Hooks to manage logic and rendering.
+Rules of components:
+1. Names must start with a capital letter.
+2. A component must return one React node, such as an element or fragment.
+3. Components can receive read-only props from their parent, including
+   children.
+4. Props and state should not be mutated directly.
+5. Components should be pure during rendering; side effects belong in event
+   handlers or Effects.
+6. Hooks must be called at the top level of functional components or custom
+   Hooks.
+7. Components can be combined to build larger user interfaces.
