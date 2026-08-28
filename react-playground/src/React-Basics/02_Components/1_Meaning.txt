@@ -1,0 +1,6 @@
+There are two types of components in React: Class components and Functional components.
+
+1. Functional Components- Modern Standard (Everyone use this now)
+2. Class Components- Old Standard (Not used much now)
+
+~ Class components are legacy, ES6 class-based structures that explicitly manage state and lifecycle events, while functional components are modern, plain JavaScript functions that leverage React Hooks to manage logic and rendering.
