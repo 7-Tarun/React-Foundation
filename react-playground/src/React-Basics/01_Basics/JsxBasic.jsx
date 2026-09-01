@@ -5,7 +5,6 @@ function JsxBasics() {
     return (
         <div>
             <h1>Hello I am React</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, totam.</p>
             <p>I am {2+2}</p>
             <p>I am {name}</p>
         </div>
