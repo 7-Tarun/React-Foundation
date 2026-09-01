@@ -1,11 +1,12 @@
 import JsxBasics from './React-Basics/01_Basics/JsxBasic'
-import Greeting from '.React-Basics/02_Components/Greeting'
+import Greeting from './React-Basics/02_Components/Greeting'
 
 function App() {
     return (
         <div>
-            <JsxBasics/>
+            {/* <JsxBasics/> */}
             <Greeting name = "Master" age = {21}/>
+            <Greeting name = "Shifu" age = {18}/>
         </div>
     )
 }
