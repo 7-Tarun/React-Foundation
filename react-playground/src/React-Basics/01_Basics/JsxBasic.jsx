@@ -13,6 +13,8 @@ function JsxBasics() {
 
 export default JsxBasics
 
+//{name}: This is an evalutaed expression, cause it is the final outcome(evaluated) of JS.
+
 // export default allows a file to export a single main value, and when importing it, you can give it any name you like — the name doesn't need to match. A named export, on the other hand, lets a file export multiple values, but when importing them, you have to use the exact same name, wrapped in curly braces.
 // The common convention is one default export per component file, and named exports for helper functions or constants.
 
