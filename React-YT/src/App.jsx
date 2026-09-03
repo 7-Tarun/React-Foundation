@@ -1,10 +1,21 @@
+import { useState } from "react";
+
 function App() {
-  let counter = 5;
+
+  let [counter, setCounter] = useState(15);
 
   const addValue = () => {
-    console.log("Value added: ", counter);
-    counter = counter+1;
-    
+    if(counter >= 20){
+      return alert("Maximum Limit Reached");
+    }
+    setCounter(counter+1);
+  }
+
+  const removeValue = () => {
+    if(counter <= 0){
+      return alert("Minimum Limit Reached");
+    }
+    setCounter(counter-1);
   }
 
   return (
@@ -14,7 +25,9 @@ function App() {
       <button
       onClick={addValue}
       >Add   {counter}</button>
-      <button>Remove</button>
+      <button
+      onClick={removeValue}
+      >Remove</button>
       <p>{counter}</p>
     </>
   )
