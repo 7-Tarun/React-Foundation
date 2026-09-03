@@ -36,3 +36,5 @@ function App() {
 export default App
 
 //UI Updation is controlled by React
+
+// useState tells React to keep this variable in sync with the UI—wherever the variable is displayed, it will auto-update automatically.
