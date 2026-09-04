@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Counter() {
-    const [count, setCount] = useState(15);
+    let [count, setCount] = useState(15);
     return(
         <>
         <h1>Counter: {count}</h1>
@@ -11,6 +11,9 @@ function Counter() {
         <button
         onClick={() => setCount(count-1)}
         >Decrease</button>
+        <button
+        onClick={() => setCount(count = 0)}
+        >Reset</button>
         </>
     )
 }
