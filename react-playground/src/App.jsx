@@ -1,5 +1,6 @@
 import JsxBasics from './React-Basics/01_Basics/JsxBasic'
 import Greeting from './React-Basics/02_Components/Greeting'
+import Counter from './React-Basics/02_Components/UseState'
 
 function App() {
     return (
@@ -7,6 +8,7 @@ function App() {
             {/* <JsxBasics/> */}
             <Greeting name = "Master" age = {21}/>
             <Greeting name = "Shifu" age = {18}/>
+            <Counter/>
         </div>
     )
 }
