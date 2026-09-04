@@ -43,7 +43,6 @@ export default App
  * REACT BATCHING TRAP: 
  * React batches state updates for performance. 
  * setCounter(counter + 1) called multiple times uses the same state snapshot, incrementing only by 1.
- * 
  * FIX (Updater Callback): 
  * Use a callback to fetch the latest pending state from the queue:
  * setCounter((prevCounter) => prevCounter + 1); 

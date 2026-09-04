@@ -25,3 +25,7 @@ function Counter() {
 
 export default Counter
 // useState — Is the most imp hook of React.
+
+//Remember the difference
+// { setCount(...) }        → turant chalega (evaluate = execute) {means execute the jsx expression immediately}
+// { () => setCount(...) }  → sirf tab chalega jab actual event ho (click)
