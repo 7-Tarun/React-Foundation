@@ -1,7 +1,12 @@
 import { useState } from "react";
 
 function Counter() {
-    let [count, setCount] = useState(15);
+    const [count, setCount] = useState(15);
+    function handleDecrease() {
+        if(count > 0){
+            setCount(count-1);
+        }
+    }
     return(
         <>
         <h1>Counter: {count}</h1>
@@ -9,10 +14,10 @@ function Counter() {
         onClick={() => setCount(count+1)}
         >Increase</button>
         <button
-        onClick={() => setCount(count-1)}
+        onClick={handleDecrease}
         >Decrease</button>
         <button
-        onClick={() => setCount(count = 0)}
+        onClick={() => setCount(0)}
         >Reset</button>
         </>
     )
