@@ -1,4 +1,5 @@
-/* Sabhi elements se extra space hatane ke liye */
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
