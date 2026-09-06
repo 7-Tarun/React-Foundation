@@ -1,8 +1,8 @@
 import JsxBasics from './React-Basics/01_Basics/JsxBasic'
-import Greeting from './React-Basics/02_Components/Greeting'
-import Example from './React-Basics/02_Components/UseEffect'
-import TitleUpdater from './React-Basics/02_Components/UseEffect2'
-import Counter from './React-Basics/02_Components/UseState'
+import Greeting from './React-Basics/02_Core/2_Greeting'
+import Example from './React-Basics/02_Core/5_UseEffect'
+import TitleUpdater from './React-Basics/02_Core/6_UseEffect'
+import Counter from './React-Basics/02_Core/3_UseState'
 
 function App() {
     return (

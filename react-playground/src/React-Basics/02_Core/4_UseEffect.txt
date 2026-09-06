@@ -1,7 +1,7 @@
 useEffect — "Side Effects" handle karne ka Hook
-What is a Side Effect?
 
-A component normally receives data and returns UI.
+What is a Side Effect?
+~A component normally receives data and returns UI.
 But sometimes, a component needs to perform actions outside its normal rendering process, such as:
 
 Fetching API data
