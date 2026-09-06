@@ -1,6 +1,7 @@
 import JsxBasics from './React-Basics/01_Basics/JsxBasic'
 import Greeting from './React-Basics/02_Components/Greeting'
 import Example from './React-Basics/02_Components/UseEffect'
+import TitleUpdater from './React-Basics/02_Components/UseEffect2'
 import Counter from './React-Basics/02_Components/UseState'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
             {/* <Greeting name = "Shifu" age = {18}/> */}
             {/* <Counter/> */}
             <Example/>
+            {/* <TitleUpdater/> */}
         </div>
     )
 }
