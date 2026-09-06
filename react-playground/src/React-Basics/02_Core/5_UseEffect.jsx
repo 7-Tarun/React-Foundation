@@ -5,7 +5,6 @@ function Example(){
     useEffect(() => {
         console.log("Effect Run Count: ",count);
     }, [count]);
-    document.title = `Click ${count}`;
 
     return(
         <>

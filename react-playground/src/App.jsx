@@ -11,7 +11,7 @@ function App() {
             {/* <Greeting name = "Master" age = {21}/> */}
             {/* <Greeting name = "Shifu" age = {18}/> */}
             {/* <Counter/> */}
-            <Example/>
+            {/* <Example/> */}
             {/* <TitleUpdater/> */}
         </div>
     )
