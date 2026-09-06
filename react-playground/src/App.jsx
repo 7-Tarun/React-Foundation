@@ -12,7 +12,7 @@ function App() {
             {/* <Greeting name = "Shifu" age = {18}/> */}
             {/* <Counter/> */}
             {/* <Example/> */}
-            {/* <TitleUpdater/> */}
+            <TitleUpdater/>
         </div>
     )
 }
