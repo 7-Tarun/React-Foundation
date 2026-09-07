@@ -13,3 +13,21 @@ useEffect(() => {
 (Meaning of mount and unmount: Mounting is the process of creating and inserting a component into the DOM, while unmounting is the process of removing a component from the DOM.)
 
 
+Solution — return a function from inside useEffect:-
+
+useEffect(() => {
+  const timerId = setInterval(() => {
+    console.log("Tick")
+  }, 1000)
+
+  return () => {
+    clearInterval(timerId)   // ye "cleanup" hai
+  }
+}, [])
+
+
+The return () => {...} function is called the cleanup function.
+React automatically runs it:
+1. When the component unmounts.
+2. Before the effect runs again when its dependencies change.
+   React cleans up the previous effect first, then runs the new one.
