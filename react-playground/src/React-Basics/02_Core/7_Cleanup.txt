@@ -1,0 +1,15 @@
+Cleanup Function — The last piece of useEffect.
+
+Problem that cleanup solves:-
+Imagine you write a useEffect that starts a timer when the component mounts. 
+
+useEffect(() => {
+  setInterval(() => {
+    console.log("Tick")
+  }, 1000)
+}, [])
+
+-Problem: The timer will log "Tick" to the console every second. However, if the component unmounts, the timer will continue to run in the background, leading to potential memory leaks and unexpected behavior.
+(Meaning of mount and unmount: Mounting is the process of creating and inserting a component into the DOM, while unmounting is the process of removing a component from the DOM.)
+
+
