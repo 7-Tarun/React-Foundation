@@ -3,6 +3,7 @@ import Greeting from './React-Basics/02_Core/2_Greeting'
 import Example from './React-Basics/02_Core/5_UseEffect'
 import TitleUpdater from './React-Basics/02_Core/6_UseEffect'
 import Counter from './React-Basics/02_Core/3_UseState'
+import Timer from './React-Basics/02_Core/8_Timer'
 
 function App() {
     return (
@@ -12,7 +13,8 @@ function App() {
             {/* <Greeting name = "Shifu" age = {18}/> */}
             {/* <Counter/> */}
             {/* <Example/> */}
-            <TitleUpdater/>
+            {/* <TitleUpdater/> */}
+            {/* <Timer/> */}
         </div>
     )
 }
