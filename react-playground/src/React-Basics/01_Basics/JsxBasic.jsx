@@ -4,7 +4,7 @@ function JsxBasics() {
     const name = "Stephen";
     return (
         <div>
-            <h1>Hello I am React</h1>
+            <h1 class="text-3xl font-bold text-blue-600">Hello I am React</h1>
             <p>I am {2+2}</p>
             <p>I am {name}</p>
         </div>

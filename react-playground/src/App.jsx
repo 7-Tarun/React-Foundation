@@ -10,13 +10,14 @@ function App() {
     const [showTimer, setShowTimer] = useState(true);
     return (
         <div>
-            {/* <JsxBasics/> */}
+            <JsxBasics/>
             {/* <Greeting name = "Master" age = {21}/> */}
             {/* <Greeting name = "Shifu" age = {18}/> */}
             {/* <Counter/> */}
             {/* <Example/> */}
             {/* <TitleUpdater/> */}
-            <button onClick={() => setShowTimer(!showTimer)}>
+            <button className="rounded bg-blue-500 px-2 py-`1 text-white" 
+            onClick={() => setShowTimer(!showTimer)}>
                 Toggle Timer
             </button>
             {showTimer && <Timer />}
