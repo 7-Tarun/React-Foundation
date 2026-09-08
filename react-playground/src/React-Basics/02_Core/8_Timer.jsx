@@ -9,11 +9,16 @@ function Timer() {
         }, 1000)
 
         return () => {
-            clearInterval(interval)
+            clearInterval(interval);
+            console.log("Timer Stopped!");
         }
     }, [])
 
-    return <h2>Timer: {seconds}</h2>
+    return (
+        <>
+        <h2>Timer: {seconds}</h2>
+        </>
+    )
 }
 
 export default Timer
