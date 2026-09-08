@@ -9,15 +9,15 @@ function Counter() {
     }
     return(
         <>
-        <h1>Counter: {count}</h1>
-        <button
+        <h1 className="font-bold text-amber-950 text-center">Counter: {count}</h1>
+        <button className="px-0.5 py-0.5 bg-red-500 text-white rounded-lg font-semibold"
         onClick={() => setCount(count+1)}
         >Increase</button>
-        <button
+        <button className="px-0.5 py-0.5 bg-red-500 text-white rounded-lg font-semibold"
         onClick={handleDecrease}
         >Decrease</button>
-        <button
-        onClick={() => setCount(0)}
+        <button className="px-0.5 py-0.5 bg-red-500 text-white rounded-lg font-semibold"
+        onClick={() => setCount(15)}
         >Reset</button>
         </>
     )
