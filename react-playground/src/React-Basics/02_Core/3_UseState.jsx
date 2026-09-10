@@ -29,3 +29,7 @@ export default Counter
 //Remember the difference
 // { setCount(...) }        → turant chalega (evaluate = execute) {means execute the jsx expression immediately}
 // { () => setCount(...) }  → sirf tab chalega jab actual event ho (click)
+
+// Reason: onClick expects a function, not the result of calling one..
+// setCount(...) calls the function during render,
+// while () => setCount(...) gives React a function to call later.
