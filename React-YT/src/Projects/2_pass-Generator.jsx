@@ -74,3 +74,14 @@ export default PjPassword
   2. useCallback Array: "If a dependency changes, RE-CREATE the function in memory."
      Syntax: const func = useCallback(() => { / logic / }, [dep1, dep2]);
  */
+
+
+/* 
+ * useRef CONCEPT:
+ * Holds a mutable value that persists across renders WITHOUT causing a component re-render.
+ * Use Case: Directly accessing and manipulating a Real DOM element (like input selection or focus).
+ * Syntax: 
+ *   const myRef = useRef(null); 
+ *   <input ref={myRef} />
+ *   myRef.current.select(); // Accessing the DOM node
+ */
