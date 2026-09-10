@@ -4,7 +4,7 @@ function PjPassword() {
 
     const [length, setLength] = useState(8);
     const [numAllowed, setNumAllowed] = useState(false);
-    const [charAllowed, setChatAllowed] = useState(false);
+    const [charAllowed, setCharAllowed] = useState(false);
     const [password, setPassword] = useState("");
 
     const passGenerator = useCallback(() => {
@@ -27,7 +27,23 @@ function PjPassword() {
             <div className="w-full max-w-md mx-auto shadow-lg px-4 my-8 text-orange-100 bg-amber-800 rounded-lg text-center p-2 text-2xl">
                 <h1 className="mb-6 font-bold tracking-wide">Password Generator</h1>
                 <input type="text" value={password} className="outline-none py-1 px-3 bg-amber-900 rounded-lg mb-4" placeholder="Password" readOnly />
-                <button className="ml-6 border-2 rounded-lg px-3 bg-amber-950">Copy</button>
+                <button className="ml-6 rounded-lg py-1 px-3 bg-amber-950">Copy</button>
+            </div>
+            <div className="flex gap-x-6 w-full max-w-xl mx-auto shadow-lg px-2 my-8 text-white bg-amber-800 rounded-lg text-center p-2 justify-center">
+                <div className="flex items-center gap-x-2">
+                    <input type="range" min={6} max={100} value={length} className="cursor-pointer" onChange={(e) => {setLength(e.target.value)}}/>
+                    <label className="ml-3 text-xl">Length: {length}</label>
+                </div>
+                <div className="flex items-center gap-x-2 text-xl">
+                    <input type="checkbox" defaultChecked={numAllowed} id="numberInput"
+                    onChange={() => {setNumAllowed((prev) => !prev);}} />
+                    <label htmlFor="numberInput">Numbers</label>
+                </div>
+                <div className="flex items-center gap-x-2 text-xl">
+                    <input type="checkbox" defaultChecked={charAllowed} id="charInput"
+                    onChange={() => {setCharAllowed((prev) => !prev);}} />
+                    <label htmlFor="charInput">Characters</label>
+                </div>
             </div>
         </>
     )
