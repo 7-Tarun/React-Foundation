@@ -14,13 +14,17 @@ function PjPassword() {
         if (numAllowed) str += "0123456789";
         if (charAllowed) str += "~`!<>?/@#$;:'.,+-*(){}&^%";
 
-        for (let i = 1; i <= array.length; i++) {
+        for (let i = 1; i <= length; i++) {
             let char = Math.floor(Math.random() * str.length + 1);
-            pass = str.charAt(char);
+            pass += str.charAt(char);
         }
         setPassword(pass);
 
     }, [length, numAllowed, charAllowed, setPassword]);
+
+    useEffect(() => {
+        passGenerator();
+    },[length,numAllowed,charAllowed,setPassword])
 
     return (
         <>
