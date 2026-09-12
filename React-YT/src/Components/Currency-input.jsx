@@ -1,4 +1,4 @@
-import { useEffec, useId, useState } from "react";
+import { useId } from "react";
 import React from "react";
 
 function InputBox({ 
@@ -41,11 +41,11 @@ function InputBox({
                     disabled={currencyDisable}
                 >
 
-                    {currencyOptions.map((currency) => {
+                    {currencyOptions.map((currency) => (
                         <option key={currency} value={currency}>
                             {currency}
                         </option>
-                    } )}
+                    ))}
 
 
                 </select>
