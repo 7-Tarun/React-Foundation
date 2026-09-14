@@ -1,0 +1,17 @@
+React is a Single Page Application (SPA).
+A React app usually has a single HTML page (index.html).
+
+So when we navigate to /about or /products, a new HTML page is not loaded.
+
+React Router:
+1. Watches the current URL.
+2. Matches the URL with a defined route.
+3. Renders the corresponding React component.
+4. Changes the URL without a full page reload.
+
+Example:
+/         → Home component
+/about    → About component
+/products → Products component
+
+This creates the experience of multiple pages while the app remains a SPA.
