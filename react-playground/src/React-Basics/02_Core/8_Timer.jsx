@@ -27,5 +27,4 @@ export default Timer
 // 1. Timers/Intervals → clearInterval() or clearTimeout()
 // 2. Event Listeners → removeEventListener()
 // 3. API Requests/Subscriptions → abort or unsubscribe when no longer needed
-//
 // If an effect creates nothing to clean up, adding a cleanup function is unnecessary.

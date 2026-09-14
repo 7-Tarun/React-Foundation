@@ -1,6 +1,6 @@
 // -Properties(Props)
 
-function Greeting({name,age}) {
+function Greeting({name ,age}) {
     return(
         <>
         <h1>Hello, {name} !</h1>
@@ -14,6 +14,6 @@ export default Greeting
 // React follows one-way data flow: data moves from parent to child.
 
 // What's the practical benefit of destructuring props, other than just shorter code?
-// -Readability:   function UserCard({ name, age, email, avatar }) {  // yehi pata chal gaya kya-kya chahiye
+// -Readability:    function UserCard({ name, age, email, avatar }) {  // yehi pata chal gaya kya-kya chahiye
 // -You can set default values:    function Greeting({ name, age = 18 }) {   // age nahi diya toh 18 default
 // -This makes data flow predictable and easier to manage.
