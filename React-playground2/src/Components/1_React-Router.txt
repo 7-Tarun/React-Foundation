@@ -15,3 +15,5 @@ Example:
 /products → Products component
 
 This creates the experience of multiple pages while the app remains a SPA.
+
+Note- Your application must be wrapped with the BrowserRouter component to enable routing.
