@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from '../Components/1_Home'
 import About from '../Components/2_About'
 import Navbar from '../Components/3_Navbar'
+import UserPage from '../Components/4_UserPage'
 
 function Router() {
     return(
@@ -9,6 +10,7 @@ function Router() {
         <Routes>
             <Route path='/' element  = {<Home/>} />
             <Route path='/about' element  = {<About/>} />
+            <Route path='/user/:name' element = {<UserPage/>} />
         </Routes>
         <Navbar/>
         </>

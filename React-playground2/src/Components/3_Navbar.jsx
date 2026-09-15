@@ -5,6 +5,7 @@ function Navbar() {
         <nav>
             <Link className='text-amber-950 border-2 rounded-2xl px-2 cursor-pointer' to="/">Home</Link>
             <Link className='text-amber-950 border-2 rounded-2xl px-2 cursor-pointer ml-2' to="/about">About</Link>
+            <Link className='text-amber-950 border-2 rounded-2xl px-2 cursor-pointer ml-2' to="/user/Stephen">User</Link>
         </nav>
     )
 }
