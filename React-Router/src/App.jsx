@@ -1,11 +1,14 @@
 import Header from "./Components/Header"
+import Footer from "./Components/Footer"
+import Home from "./Components/Home"
 
 function App() {
 
   return (
     <>
     <Header/>
-    <h1 className='bg-blue-600 p-4'>React Router</h1>
+    <Home/>
+    <Footer/>
     </>
   )
 }
