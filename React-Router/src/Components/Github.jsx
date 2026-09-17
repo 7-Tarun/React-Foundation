@@ -1,25 +1,8 @@
-import { useState, useEffect } from "react";
+import { useLoaderData } from 'react-router-dom';
 
 function Github() {
-    const [data, setData] = useState({});
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const url = "https://api.github.com/users/7-Tarun";
-                const response = await fetch(url);
-                const resData = await response.json();
-
-                setData(resData);
-            }
-            catch (error) {
-                alert("Error Occured: Can't fetch the data plz don't try again");
-            }
-        }
-
-        fetchData();
-
-    }, [])
+    const data = useLoaderData();
 
     return (
         <>
@@ -43,4 +26,26 @@ function Github() {
     )
 }
 
-export default Github
+export default Github;
+
+//REACT ROUTER LOADERS & useLoaderData
+
+export const gitLoader = async () => {
+    try{
+       const url = "https://api.github.com/users/7-Tarun";
+        const response = await fetch(url);
+        return await response.json();
+    }
+    catch(error){
+        alert(`Error Occured: Can't fetch the data ${error}`);
+        return null;
+    }
+}
+
+// Fetch data BEFORE the component renders to eliminate UI flicker and loading lags.
+
+// Working:
+// 1. Loader Function → An async function fetches and returns the data.
+// 2. Route Registration → Pass the loader using the `loader` prop.
+// 3. Data Loading → React Router runs the loader and waits for the data.
+// 4. useLoaderData() → The component gets the loaded data without useState or useEffect.
