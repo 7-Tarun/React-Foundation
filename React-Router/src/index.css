@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-body{
-    margin-left: 200px;
-    margin-right: 200px;
+body {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
 }

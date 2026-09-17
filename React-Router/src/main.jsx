@@ -6,7 +6,7 @@ import { RouterProvider, BrowserRouter, createBrowserRouter, createRoutesFromChi
 import Home from './Components/Home.jsx'
 import About from './Components/About.jsx'
 import Contact from './Components/Contact.jsx'
-import User from './Components/Users/User.jsx'
+import User from './Components/User.jsx'
 
 import { gitLoader } from './Components/Github.jsx'
 import Github from './Components/Github.jsx'
