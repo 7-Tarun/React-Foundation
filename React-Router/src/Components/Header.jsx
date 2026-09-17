@@ -4,7 +4,7 @@ import logo from '../assets/Gemini_Generated_Image_50m17y50m17y50m1.png'
 
 export default function Header() {
     return (
-        <header className="shadow sticky z-50 top-0">
+        <header className="shadow sticky z-50 top-0 rounded-2xl">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen">
                     <Link to="/" className="flex items-center">
@@ -61,6 +61,16 @@ export default function Header() {
                                     }
                                 >
                                     Contact
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                to='/github'
+                                    className={({isActive}) =>
+                                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-700" : "text-gray-700"} border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                >
+                                    Github
                                 </NavLink>
                             </li>
                         </ul>
