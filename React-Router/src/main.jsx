@@ -15,7 +15,7 @@ import Github from './Components/Github.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
+      <Route path="" element={<Home />} />    {/* Home is the default child of app component ("")*/}
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="user/:id" element={<User />} />
