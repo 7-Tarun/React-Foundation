@@ -7,3 +7,8 @@ Example:
 
 This unnecessary prop passing is called Prop Drilling.
 
+
+Solution: The solution is to create a global object (Context API / Redux).
+-Create a shared data source (Context). 
+
+Components like Card can access the data directly from Context instead of passing props through intermediate components.
