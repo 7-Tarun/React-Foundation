@@ -15,8 +15,8 @@ function Login() {
     return(
         <>
         <h2>Login</h2>
-        <input value={userName} onChange={(e) => setUserName(e.target.value)} type="text" placeholder="UserName" />
-        <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" placeholder="Password" />
+        <input value={userName} onChange={(e) => setUserName(e.target.value)} type="text" placeholder="UserName" /> <br />
+        <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" placeholder="Password" /> <br />
         <button onClick={handleSubmit}>Submit</button>
         </>
     )
