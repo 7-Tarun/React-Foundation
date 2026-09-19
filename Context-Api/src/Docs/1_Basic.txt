@@ -1,0 +1,9 @@
+Problem: Prop Drilling
+-The default rule of React data can only flow from parent to child via props.
+
+Example:
+        App → Dashboard → Sidebar → Top → Card
+-App has the user data, Card needs it.
+
+This unnecessary prop passing is called Prop Drilling.
+
