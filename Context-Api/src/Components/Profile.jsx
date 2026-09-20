@@ -1,4 +1,4 @@
-import UserContext from "../Context/UserContext"
+import { UserContext } from "../Context/ContextProvider"
 import { useContext } from "react"
 
 function Profile() {
