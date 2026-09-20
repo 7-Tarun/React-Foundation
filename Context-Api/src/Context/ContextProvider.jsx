@@ -13,3 +13,17 @@ const ContextProvider = ({children}) => {
 }
 
 export default ContextProvider
+
+
+// Here UserContext is the Label/ID.
+// and ContextProvider is the Global Box.
+
+// Every Context object comes with a built-in Provider component.
+// It acts as a wrapper. Any component placed inside this wrapper gets direct
+// access to the global state, completely eliminating prop drilling.
+
+// Syntax Structure:
+//     <UserContext.Provider value={/* data */}>
+//         <LoginComponent />
+//         <DashboardComponent />
+//     </UserContext.Provider>
