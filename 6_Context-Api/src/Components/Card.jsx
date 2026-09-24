@@ -1,6 +1,4 @@
 import { useTheme } from "./UseTheme"
-import { useContext } from "react"
-
 
 function Card() {
     const {theme, toggleTheme} = useTheme();
