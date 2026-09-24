@@ -1,12 +1,7 @@
-import Login from "./Components/Login"
-import Profile from "./Components/Profile"
-
 function App() {
-
   return (
     <>
-    <Login/>
-    <Profile/>
+
     </>
   )
 }
