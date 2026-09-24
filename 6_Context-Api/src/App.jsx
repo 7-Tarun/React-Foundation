@@ -1,10 +1,12 @@
 import Card from "./Components/Card"
+import Profile from "./Components/Profile"
 
 function App() {
 
   return (
     <>
-    <Card/>
+    {/* <Card/> */}
+    <Profile/>
     </>
   )
 }

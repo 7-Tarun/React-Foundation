@@ -75,6 +75,7 @@ body {
 .product-card .card-actions {
 	display: flex;
 	justify-content: flex-end;
+	gap: 0.6rem;
 	margin-top: 1.25rem;
 }
 
@@ -93,6 +94,17 @@ body {
 .product-card .btn:hover {
 	background: #1d4ed8;
 	transform: translateY(-1px);
+}
+
+.product-card .btn-outline {
+	color: #2563eb;
+	background: transparent;
+	border: 1px solid #2563eb;
+}
+
+.product-card .btn-outline:hover {
+	color: #ffffff;
+	background: #2563eb;
 }
 
 @media (max-width: 480px) {

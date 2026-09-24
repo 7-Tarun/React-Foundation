@@ -1,9 +1,7 @@
 import { useTheme } from "./UseTheme"
-import { useAuth } from "../Context/AuthContext";
 
 function Card() {
     const {theme, toggleTheme} = useTheme();
-    const {user,login,logout} = useAuth();
 
     return (
         <main className="page-shell">
@@ -14,7 +12,7 @@ function Card() {
                         alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                    <h2 className={`card-title ${theme === "dark" ? 'text-green-100' : 'text-green-800'}`}>    {user}</h2>
+                    <h2 className={`card-title ${theme === "dark" ? 'text-green-100' : 'text-green-800'}`}>Jonathan</h2>
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <div className="card-actions justify-end">
                         <button 
