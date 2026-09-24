@@ -12,9 +12,6 @@ function App() {
       <h1 className="heading">Context Api</h1>
       <h3>Count: {counterState.count}</h3>
       <Counter /> <br />
-      <Counter /> <br />
-      <Counter /> <br />
-      <Counter /> <br />
     </>
   )
 }
