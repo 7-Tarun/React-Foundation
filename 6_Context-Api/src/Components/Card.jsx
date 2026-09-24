@@ -1,7 +1,7 @@
 import { useTheme } from "./UseTheme"
 
 function Card() {
-    const {theme, toggleTheme} = useTheme();
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <main className="page-shell">
@@ -15,9 +15,9 @@ function Card() {
                     <h2 className={`card-title ${theme === "dark" ? 'text-green-100' : 'text-green-800'}`}>Jonathan</h2>
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <div className="card-actions justify-end">
-                        <button 
-                        className="btn btn-primary"
-                        onClick={toggleTheme}
+                        <button
+                            className="btn btn-primary"
+                            onClick={toggleTheme}
                         >Toggle Theme</button>
                     </div>
                 </div>

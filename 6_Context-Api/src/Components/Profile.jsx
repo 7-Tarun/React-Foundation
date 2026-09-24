@@ -5,10 +5,10 @@ function Profile() {
 
     return (
 
-        <div className="flex min-h-screen items-center justify-center bg-blue-50 from-slate-50 via-white to-zinc-100 p-8">
+        <div className=" flex min-h-screen items-center justify-center bg-blue-50 from-slate-50 via-white to-zinc-100 p-8">
 
 
-            <div className="flex w-72 flex-col items-center rounded-2xl bg-white p-8 text-center shadow-lg ring-1 ring-slate-100">
+            <div className="transition-all duration-300 ease-in-out hover:scale-105 flex w-72 flex-col items-center rounded-2xl bg-white p-8 text-center shadow-lg ring-1 ring-slate-100">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-2xl font-semibold text-white shadow-md">
                     JD
                 </div>
