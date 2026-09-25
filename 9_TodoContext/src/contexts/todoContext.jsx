@@ -1,5 +1,4 @@
 import { createContext, useContext } from "react";
-import { useState } from "react";
 
 export const TodoContext = createContext({
     todos: [
