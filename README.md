@@ -52,12 +52,14 @@ React-Foundation/
 - Auth/theme state sharing
 - Provider patterns
 - Component-level access to shared state
+- Live Demo: https://react-foundation-alpha.vercel.app/
 
 ### 9_TodoContext
 - Todo application built with React Context
 - Add, edit, delete, and toggle tasks
 - Persistence using `localStorage`
 - Clean separation of UI and state logic
+- Live Demo: https://todoweb-drab.vercel.app/
 
 ## Tech stack
 
