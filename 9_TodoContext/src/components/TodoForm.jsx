@@ -4,16 +4,18 @@ import { useTodo } from "../contexts/todoContext";
 function TodoForm() {
 
     const [todo,setTodo] = useState("")
-    const {addTodo} = useTodo()
+    const {addTodo} = useTodo() //Global context function
 
+    //Handle Form submit
     const add = (e) => {
         e.preventDefault()
 
         if(!todo) return
 
+        //passing object cause addTodo function in app.jsx expecting object.
         addTodo({todo, completed: false})
 
-        setTodo("")
+        setTodo("") //Input field ko empty kar diya
     }
 
     return (

@@ -5,6 +5,8 @@ function TodoItem({ todo }) {
 
     const [isTodoEditable, setIsTodoEditable] = useState(false);
     const [todoMsg, setTodoMsg] = useState(todo.todo);
+
+    //Context se function nikala
     const {updateTodo, deleteTodo, toggleComplete} = useTodo();
 
     const editTodo = () => {
