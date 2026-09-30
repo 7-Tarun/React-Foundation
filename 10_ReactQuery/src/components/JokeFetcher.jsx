@@ -19,8 +19,8 @@ function JokeFetcher() {
         })
     }, []);
 
-    if(loading) return <p>Loading...;</p> 
-    if(error) return <p>{error}</p>;
+    if(loading) return <p>Loading...</p> 
+    if(error) return <p>Some thing is wrong</p>;
 
     return(
         <>
@@ -30,3 +30,11 @@ function JokeFetcher() {
 }
 
 export default JokeFetcher
+
+// This approach works, but becomes repetitive and harder to manage:
+
+// 1. Multiple components → Each manually handles loading, error, and data states.
+// 2. No caching → Revisiting the page fetches the data again.
+// 3. Extra features → Retry, refetching, polling, etc. must be implemented manually.
+
+// This is why data-fetching libraries and React Router loaders can simplify the architecture.
