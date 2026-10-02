@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react"
+
 function Search () {
+
     return(
         <>
         <div className=" mt-4 gap-2 text-center text-sm">
