@@ -1,11 +1,15 @@
+import { useWeather } from "../contexts/WeatherContext"
+
 function Card() {
+
+    const {weatherData} = useWeather();
 
     return (
         <>
             <div className="text-center mt-10">
-                <h1>Jaipur</h1>
-                <h3>34°C</h3>
-                <p>Feels like 33°</p>
+                <h1>{weatherData.city}</h1>
+                <h3>{weatherData.temp}</h3>
+                <p>{weatherData.feels}</p>
             </div>
         </>
     )

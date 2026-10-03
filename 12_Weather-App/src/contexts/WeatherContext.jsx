@@ -21,12 +21,10 @@ export const WeatherProvider = ({children}) => {
     ]);
 
     const [isFahrenheit , setIsFahrenheit ] = useState(false);
-    const toggleUnit = () => {
-        
-    }
+    const toggleUnit = () => setIsFahrenheit(prev => !prev);
 
     return(
-        <WeatherContext.Provider value={{weatherData, setWeatherData, history, setHistory, isFahrenheit, setIsFahrenheit}}>
+        <WeatherContext.Provider value={{weatherData, setWeatherData, history, setHistory, isFahrenheit, toggleUnit}}>
             {children}
         </WeatherContext.Provider>
     )
