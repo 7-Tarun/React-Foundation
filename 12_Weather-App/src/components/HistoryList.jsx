@@ -1,18 +1,20 @@
 import { useWeather } from "../contexts/WeatherContext"
 
-function HistoryList () {
+function HistoryList() {
 
-    const {history} = useWeather();
+    const { history } = useWeather();
 
-    return(
+    return (
         <>
-        <div>
-            <ul className="flex gap-2 justify-center">
-                <li>{history[0]}</li>
-                <li>{history[1]}</li>
-                <li>{history[2]}</li>
-            </ul>
-        </div>
+            <div>
+                <ul className="flex gap-2 justify-center">
+                    {history.map((city, index) => (
+                        <li key={index} className="bg-gray-700 px-3 py-1 rounded-full text-sm text-white">
+                            {city}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </>
     )
 }
