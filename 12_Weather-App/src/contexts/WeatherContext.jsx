@@ -51,6 +51,11 @@ export const WeatherProvider = ({ children }) => {
                 condition: weather.weather[0].description.toUpperCase(),
                 humidity: weather.main.humidity,
                 wind: weather.wind.speed,
+                gust: weather.wind.gust,
+                pressure: weather.main.pressure,
+                visibility: weather.visibility,
+                low: weather.main.temp_min,
+                high: weather.main.temp_max,
                 uv: 'HIGH'
             });
         }
