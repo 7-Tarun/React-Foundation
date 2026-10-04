@@ -4,7 +4,7 @@ import { useWeather } from "../contexts/WeatherContext";
 function Search() {
 
     const [city, setCity] = useState("");
-    const {addSearchHistory} = useWeather();
+    const {addSearchHistory, weatherFetcher} = useWeather();
 
     const addCity = (e) => {
         e.preventDefault();
@@ -18,12 +18,15 @@ function Search() {
         // Context wale function ko call kar diya
         addSearchHistory(city);
         // Search hone ke baad input box ko wapas khali kar diya
-        setCity(""); 
+        setCity("");
+        weatherFetcher(city);
     }
 
     return (
         <>
-            <form onSubmit={addCity} className=" mt-4 gap-2 text-center text-sm">
+            <form onSubmit={addCity}
+
+            className=" mt-4 gap-2 text-center text-sm">
                 <input
                     className="border-black border-2 rounded-md m-2 p-1"
                     type="text"
