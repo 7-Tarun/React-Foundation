@@ -23,7 +23,7 @@ function Search() {
     }
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 mb-6">
+    <div className="w-full max-w-2xl mx-auto px-4 mb-6 mt-6">
       <form onSubmit={addCity} className="bg-gradient-to-r from-white/80 via-amber-50/40 to-orange-100/40 backdrop-blur-md rounded-2xl p-2 shadow-sm border border-orange-100/50 flex items-center justify-between">
         <div className="flex items-center flex-1 px-3 gap-3">
           <svg 
