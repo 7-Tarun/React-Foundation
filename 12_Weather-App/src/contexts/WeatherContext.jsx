@@ -11,19 +11,27 @@ export const WeatherProvider = ({ children }) => {
         condition: 'CLEAR SKY',
         humidity: 28,
         wind: 13,
-        gust: 15,       
-        pressure: 1012, 
-        visibility: 10, 
-        low: 29,        
-        high: 34,       
+        gust: 15,
+        pressure: 1012,
+        visibility: 10,
+        low: 29,
+        high: 34,
         uv: 'HIGH'
     });
 
-    const [history, setHistory] = useState([
-        'Jaipur',
-        'Rajasthan',
-        'Haryana',
-    ]);
+    const [history, setHistory] = useState(() => {
+        const saveHistory = localStorage.getItem("weatherHistory")
+        if (saveHistory) {
+            // Agar pehle se data hai, toh parse karke return karo
+            return JSON.parse(saveHistory)
+        }
+        // Agar 1st time user hai, toh default history set karo
+        return ['Delhi', 'Rajasthan', 'Maharashtra']
+    });
+
+    useEffect(() => {
+        localStorage.setItem("weatherHistory", JSON.stringify(history))  //setdata array ko string me convert kiya
+    }, [history])
 
     const [isFahrenheit, setIsFahrenheit] = useState(false);
     const toggleUnit = () => setIsFahrenheit(prev => !prev);
@@ -38,6 +46,7 @@ export const WeatherProvider = ({ children }) => {
 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
+
     const weatherFetcher = async (city) => {
         setIsLoading(true);
         setError(null);

@@ -4,7 +4,7 @@ import { useWeather } from "../contexts/WeatherContext";
 function Search() {
 
     const [city, setCity] = useState("");
-    const {addSearchHistory, weatherFetcher} = useWeather();
+    const { weatherFetcher} = useWeather();
 
     const addCity = (e) => {
         e.preventDefault();

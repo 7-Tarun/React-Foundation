@@ -3,6 +3,9 @@ import { useWeather } from "../contexts/WeatherContext"
 function HistoryList() {
 
     const { history, weatherFetcher } = useWeather();
+
+    
+
     return (
         <div className="flex items-center justify-center gap-2.5">
 
