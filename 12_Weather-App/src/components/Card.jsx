@@ -3,8 +3,8 @@ import { useWeather } from "../contexts/WeatherContext"
 
 function Card() {
 
-    const { weatherData } = useWeather();
-    const { city, temp, feels, condition, humidity, wind, low, high, gust, pressure, visibility, uv } = weatherData;
+  const { weatherData } = useWeather();
+  const { city, temp, feels, condition, humidity, wind, low, high, gust, pressure, visibility, uv } = weatherData;
 
   return (
     <article className="weather-card" aria-label={`Weather in ${city}`}>
@@ -86,7 +86,7 @@ function Card() {
             </svg>
             <span>Humidity</span>
           </div>
-          <strong>{humidity}</strong>
+          <strong>{humidity}<span className="ml-0.5 text-[0.80em] font-large opacity-70">%</span></strong>
         </div>
 
         <div className="weather-card__metric">
@@ -96,7 +96,7 @@ function Card() {
             </svg>
             <span>Wind</span>
           </div>
-          <strong>{wind}</strong>
+          <strong>{wind}<span className="ml-0.5 text-[0.80em] font-large opacity-70">Km/h</span></strong>
         </div>
 
         <div className="weather-card__metric">
@@ -109,22 +109,47 @@ function Card() {
           </div>
           <strong>{uv}</strong>
         </div>
+
+        <div className="weather-card__metric">
+          <div className="weather-card__metric-head">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 15a8 8 0 1 1 16 0" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              <path d="M12 11l3.2-3.2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              <circle cx="12" cy="11" r="1.4" fill="currentColor" />
+              <path d="M6.5 18h11" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+            </svg>
+            <span>Pressure</span>
+          </div>
+          <strong>{pressure}<span className="ml-0.5 text-[0.80em] font-large opacity-70">hPa</span></strong>
+        </div>
+
+        <div className="weather-card__metric">
+          <div className="weather-card__metric-head">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 9h8.5a2.5 2.5 0 1 0-2.3-3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              <path d="M3 14h13a3 3 0 1 0-2.8-4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              <path d="M6 19h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              <path d="M18.5 6.5l1.2-1.2M20 9.5h1.7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+            </svg>
+            <span>Gust</span>
+          </div>
+          <strong>{gust}<span className="ml-0.5 text-[0.80em] font-large opacity-70">Km/h</span></strong>
+        </div>
+
+        <div className="weather-card__metric">
+          <div className="weather-card__metric-head">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M2.8 12s3.3-5 9.2-5 9.2 5 9.2 5-3.3 5-9.2 5-9.2-5-9.2-5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+              <circle cx="12" cy="12" r="2.3" stroke="currentColor" strokeWidth="1.7" />
+            </svg>
+            <span>Visibility</span>
+          </div>
+          <strong>{visibility}<span className="ml-0.5 text-[0.80em] font-large opacity-70">Km</span></strong>
+        </div>
+
       </footer>
     </article>
   );
 }
 
 export default Card
-
-// const weather = {
-//   location: "Jaipur, India",
-//   date: "Sunday, October 4",
-//   temperature: "29",
-//   condition: "Clear skies",
-//   feelsLike: "27°",
-//   high: "32°",
-//   low: "24°",
-//   humidity: "21%",
-//   wind: "5 km/h",
-//   uv: "High",
-// };

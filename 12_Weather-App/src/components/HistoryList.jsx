@@ -8,7 +8,7 @@ function HistoryList() {
 
             {history.map((city, index) => (
                 <button
-                    key={index}
+                    key={city}  //using city instead of index Because we filter duplicate cities before they even enter the array. that's why city can also bhi uniquely identified.
                     className=" mb-4 rounded-full border border-stone-300 bg-stone-100 px-8 py-2.5 text-base font-medium text-stone-500 transition hover:border-orange-400 hover:bg-orange-950 hover:text-orange-300">
                     {city}
                 </button>

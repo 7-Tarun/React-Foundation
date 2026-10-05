@@ -15,10 +15,6 @@ function Search() {
             return;
         }
 
-        // Context wale function ko call kar diya
-        addSearchHistory(city);
-        // Search hone ke baad input box ko wapas khali kar diya
-        setCity("");
         weatherFetcher(city);
     }
 
@@ -39,7 +35,7 @@ function Search() {
             placeholder="Search city (e.g., Jaipur, India)..." 
             className="w-full bg-transparent text-[#1A2B4C] font-medium placeholder-amber-900/40 focus:outline-none text-base"
             value={city}
-            onChange={(e) => setCity(e.target.value)} 
+            onChange={(e) => setCity(e.target.value)}
           />
         </div>
         <button 

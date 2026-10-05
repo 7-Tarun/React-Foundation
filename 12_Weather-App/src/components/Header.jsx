@@ -14,14 +14,13 @@ function Header() {
                     <span className="text-[#E8A87C]">App</span>
                 </h1>
 
-                {/* Working Toggle Button */}
+
                 <button
                     onClick={toggleUnit}
-                    checked={isFahrenheit}
                     className="w-[68px] h-8 rounded-full bg-[#1E1410] border border-[#5D4437] flex items-center px-1 cursor-pointer transition-colors duration-300 relative focus:outline-none"
                     aria-label="Toggle Temperature Unit"
                 >
-                    {/* Animated Sliding Knob */}
+
                     <div
                         className={`w-7 h-6 rounded-full bg-[#E8A87C] flex items-center justify-center text-[#2E1F18] text-sm font-bold shadow-md transition-transform duration-300 transform ${isFahrenheit ? "translate-x-[30px]" : "translate-x-0"
                             }`}

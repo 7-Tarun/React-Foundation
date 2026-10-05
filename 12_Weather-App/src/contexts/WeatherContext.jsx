@@ -11,6 +11,11 @@ export const WeatherProvider = ({ children }) => {
         condition: 'CLEAR SKY',
         humidity: 28,
         wind: 13,
+        gust: 15,       
+        pressure: 1012, 
+        visibility: 10, 
+        low: 29,        
+        high: 34,       
         uv: 'HIGH'
     });
 
@@ -44,6 +49,7 @@ export const WeatherProvider = ({ children }) => {
                 throw new Error("City not found");
             }
             const weather = await response.json();
+            addSearchHistory(city);     //add searhistory only if get the result
             setWeatherData({
                 city: `${weather.name}, ${weather.sys.country}`,
                 temp: Math.round(weather.main.temp),
@@ -61,6 +67,7 @@ export const WeatherProvider = ({ children }) => {
         }
         catch (e) {
             setError(`Failed to fetch Weather Data${e}`);
+            alert('City not found, Please check spelling');
         }
         finally {
             setIsLoading(false);
@@ -69,7 +76,7 @@ export const WeatherProvider = ({ children }) => {
     }
 
     return (
-        <WeatherContext.Provider value={{ weatherData, setWeatherData, history, setHistory, isFahrenheit, toggleUnit, addSearchHistory, weatherFetcher, isLoading, error }}>
+        <WeatherContext.Provider value={{ weatherData, setWeatherData, history, setHistory, isFahrenheit, toggleUnit, addSearchHistory, weatherFetcher, isLoading, error, }}>
             {children}
         </WeatherContext.Provider>
     )
