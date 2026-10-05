@@ -16,6 +16,8 @@ function Search() {
         }
 
         weatherFetcher(city);
+
+        setCity("");
     }
 
   return (

@@ -4,6 +4,7 @@ import { useWeather } from "../contexts/WeatherContext"
 function Card() {
 
   const { weatherData } = useWeather();
+  const { isFahrenheit } = useWeather();
   const { city, temp, feels, condition, humidity, wind, low, high, gust, pressure, visibility, uv } = weatherData;
 
   return (
@@ -37,13 +38,15 @@ function Card() {
             Today <span aria-hidden="true">/</span> 12:30 PM
           </p>
           <div className="weather-card__temperature" role="img" aria-label={`${temp} degrees Celsius`}>
-            <span>{temp}</span>
-            <sup>°</sup>
-            <small>C</small>
+            <span className="tracking-wide">
+              {isFahrenheit ? Math.round(temp * 9/5 + 32) : temp}
+            </span>
+            <sup className="relative top-[-0.2em] font-normal">°</sup>
+            <small>{isFahrenheit ? 'F' : 'C'}</small>
           </div>
           <p className="weather-card__condition">{condition}</p>
           <div className="weather-card__summary">
-            <span>Feels like {feels}</span>
+            <span>Feels like {isFahrenheit ? Math.round(feels * 1.8 + 32) : feels}</span>
             <span className="weather-card__summary-divider" aria-hidden="true" />
             <span>H {high} <span aria-hidden="true">/</span> L {low}</span>
           </div>
