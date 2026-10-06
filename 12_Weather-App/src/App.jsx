@@ -7,10 +7,14 @@ function App() {
 
   return (
     <>
-    <Header/>
-    <Search/>
-    <HistoryList/>
-    <Card/>
+      <Header />
+      <main className="weather-stage">
+        <div className="weather-content">
+          <Search />
+          <HistoryList />
+          <Card />
+        </div>
+      </main>
     </>
   )
 }

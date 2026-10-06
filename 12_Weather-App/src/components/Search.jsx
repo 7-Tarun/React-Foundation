@@ -23,7 +23,7 @@ function Search() {
   return (
     <div className="w-full max-w-2xl mx-auto px-4 mb-6 mt-6">
       <form onSubmit={addCity} className="bg-gradient-to-r from-white/80 via-amber-50/40 to-orange-100/40 backdrop-blur-md rounded-2xl p-2 shadow-sm border border-orange-100/50 flex items-center justify-between">
-        <div className="flex items-center flex-1 px-3 gap-3">
+        <div className="flex min-w-0 flex-1 items-center gap-3 px-3">
           <svg 
             className="w-5 h-5 text-amber-700/60" 
             fill="none" 
@@ -35,14 +35,14 @@ function Search() {
           <input 
             type="text" 
             placeholder="Search city (e.g., Jaipur, India)..." 
-            className="w-full bg-transparent text-[#1A2B4C] font-medium placeholder-amber-900/40 focus:outline-none text-base"
+            className="w-full min-w-0 bg-transparent text-base font-medium text-[#1A2B4C] placeholder-amber-900/40 focus:outline-none"
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
         </div>
         <button 
           type="submit" 
-          className="cursor-pointer bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold px-6 py-2.5 rounded-xl shadow-md transition-all duration-200 text-sm tracking-wide"
+          className="shrink-0 cursor-pointer rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-md transition-all duration-200 hover:from-amber-600 hover:to-orange-600"
         >
           Search
         </button>

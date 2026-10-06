@@ -27,15 +27,19 @@ body {
 .weather-stage {
   position: relative;
   display: grid;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh - 61px);
+  min-height: calc(100svh - 61px);
   place-items: center;
-  overflow: hidden;
-  padding: 32px 20px;
+  padding: 28px 20px 40px;
   background:
     radial-gradient(ellipse at 10% 15%, rgba(112, 174, 204, 0.17), transparent 35%),
     radial-gradient(ellipse at 88% 86%, rgba(237, 177, 119, 0.2), transparent 36%),
     #edf2f6;
+}
+
+.weather-content {
+  width: min(100%, 720px);
+  min-width: 0;
 }
 
 .weather-card {
@@ -405,7 +409,11 @@ body {
 
 @media (max-width: 560px) {
   .weather-stage {
-    padding: 20px 14px;
+    padding: 20px 14px 32px;
+  }
+
+  .weather-content {
+    width: 100%;
   }
 
   .weather-card {

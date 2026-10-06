@@ -33,6 +33,12 @@ export const WeatherProvider = ({ children }) => {
         localStorage.setItem("weatherHistory", JSON.stringify(history))  //setdata array ko string me convert kiya
     }, [history])
 
+    useEffect(() => {
+        if(history.length > 0){
+            weatherFetcher(history[0]);
+        }
+    }, [])
+
     const [isFahrenheit, setIsFahrenheit] = useState(false);
     const toggleUnit = () => setIsFahrenheit(prev => !prev);
 
