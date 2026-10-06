@@ -147,7 +147,7 @@ function Card() {
             </svg>
             <span>Visibility</span>
           </div>
-          <strong>{visibility}<span className="ml-0.5 text-[0.80em] font-large opacity-70">Km</span></strong>
+          <strong>{visibility/1000}<span className="ml-0.5 text-[0.80em] font-large opacity-70">Km</span></strong>
         </div>
 
       </footer>
