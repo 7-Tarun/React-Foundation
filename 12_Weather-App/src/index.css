@@ -532,3 +532,114 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Base Layout & Size Constraints (Matches your exact layout) */
+.weather-card-skeleton {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 660px);
+  margin-inline: auto;
+  overflow: hidden;
+  padding: 30px 34px 26px;
+  border: 1px solid rgba(74, 93, 110, 0.12);
+  border-radius: 28px;
+  background: linear-gradient(135deg, #fffefa 0%, #fffaf1 57%, #f8f6ed 100%);
+  box-shadow:
+    0 30px 75px rgba(43, 61, 78, 0.13),
+    0 3px 12px rgba(43, 61, 78, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Shimmer/Pulse Animation Effect */
+@keyframes skeleton-glow {
+  0% { background-color: rgba(43, 61, 78, 0.06); }
+  50% { background-color: rgba(43, 61, 78, 0.12); }
+  100% { background-color: rgba(43, 61, 78, 0.06); }
+}
+
+.skel-text, .skel-icon, .skel-temp-box, .skel-right-icon, .skel-grid-item {
+  animation: skeleton-glow 1.5s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+/* Row 1: Top Headers */
+.skel-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skel-loc-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skel-icon.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.skel-text.short { width: 100px; height: 18px; }
+.skel-text.date { width: 120px; height: 16px; }
+
+/* Row 2: Middle Weather Block */
+.skel-middle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.skel-left-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skel-text.time { width: 90px; height: 14px; }
+.skel-temp-box { width: 140px; height: 75px; border-radius: 12px; }
+.skel-text.status { width: 160px; height: 22px; }
+.skel-text.details { width: 180px; height: 14px; }
+.skel-right-icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Row 3: Bottom 6 Grid Items */
+.skel-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(74, 93, 110, 0.06);
+  padding-top: 20px;
+}
+.skel-grid-item {
+  background-color: transparent;
+  animation: none; /* Internal items animate instead */
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.skel-grid-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.skel-icon.small-circle { width: 16px; height: 16px; border-radius: 50%; }
+.skel-text.tiny { width: 60px; height: 12px; }
+.skel-text.value { width: 75px; height: 18px; }
+
+/* Responsiveness for Mobile Screens */
+@media (max-width: 600px) {
+  .skel-bottom-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skel-right-icon {
+    width: 90px;
+    height: 90px;
+  }
+}
