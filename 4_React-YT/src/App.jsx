@@ -10,9 +10,9 @@ function App() {
     <>
       {/* <Counter /> */}
       {/* <Card /> */}
-      {/* <PjColor/> */}
+      <PjColor/>
       {/* <PjPassword/> */}
-      <PjCurrency/>
+      {/* <PjCurrency/> */}
     </>
   )
 }

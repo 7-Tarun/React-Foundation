@@ -1,4 +1,4 @@
-import Router from "./Notes/2_Router"
+import Router from "./Docs/2_Router"
 
 function App() {
   return (

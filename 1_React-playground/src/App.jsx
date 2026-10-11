@@ -1,27 +1,27 @@
 import { useState } from 'react'
-import JsxBasics from './React-Basics/01_Basics/JsxBasic'
-import Greeting from './React-Basics/02_Core/2_Greeting'
-import Example from './React-Basics/02_Core/5_UseEffect'
-import TitleUpdater from './React-Basics/02_Core/6_UseEffect'
-import Counter from './React-Basics/02_Core/3_UseState'
-import Timer from './React-Basics/02_Core/8_Timer'
+import JsxBasics from './Docs/01_Basics/JsxBasic'
+import Greeting from './Docs/02_Core/2_Greeting'
+import Example from './Docs/02_Core/5_UseEffect'
+import TitleUpdater from './Docs/02_Core/6_UseEffect'
+import Counter from './Docs/02_Core/3_UseState'
+import Timer from './Docs/02_Core/8_Timer'
 
 function App() {
     const [showTimer, setShowTimer] = useState(true);
     return (
         <div>
-            {/* <JsxBasics/> */}
-            {/* <Greeting name = "Master" age = {21}/> */}
-            {/* <Greeting name = "Shifu" age = {18}/> */}
+            <JsxBasics/>
+            <Greeting name = "Master" age = {21}/>
+            <Greeting name = "Shifu" age = {18}/>
             <Counter/>
-            {/* <Example/> */}
-            {/* <TitleUpdater/> */}
+            <Example/>
+            <TitleUpdater/>
 
             {/* <button className="rounded bg-blue-500 px-2 py-`1 text-white" 
             onClick={() => setShowTimer(!showTimer)}>
                 Toggle Timer
             </button> */}
-            {/* {showTimer && <Timer />} */}
+            {showTimer && <Timer />}
 
         </div>
     )
