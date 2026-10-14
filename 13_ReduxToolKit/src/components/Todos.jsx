@@ -1,23 +1,26 @@
 import { useSelector, useDispatch } from "react-redux"
-import {removeTodo} from '../features/todoSlice'
+import { removeTodo } from '../features/todoSlice'
 
-function Todos(){
+function Todos() {
 
     const todos = useSelector(state => state.todos);
     const dispatch = useDispatch()
 
-    return(
-        <>
-        <div>My Todos</div>
-        {todos.map((todo) => (
-            <li key={todo.id}>
-                {todo.text}
-                <button
-                onClick={() => dispatch(removeTodo(todo.id))}
-                >X</button>
-            </li>
-        ))}
-        </>
+    return (
+        <section>
+            <h2 className="mb-3 text-lg font-semibold text-slate-700">My Todos</h2>
+            <ul className="space-y-2">
+                {todos.map((todo) => (
+                    <li className="flex items-center justify-between rounded-md bg-slate-50 px-3 py-2 text-slate-700" key={todo.id}>
+                        {todo.text}
+                        <button
+                            className="rounded px-2 py-1 text-sm text-red-600 hover:bg-red-50"
+                            onClick={() => dispatch(removeTodo(todo.id))}
+                        >X</button>
+                    </li>
+                ))}
+            </ul>
+        </section>
     )
 }
 
