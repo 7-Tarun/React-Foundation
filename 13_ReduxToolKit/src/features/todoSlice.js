@@ -23,11 +23,19 @@ const todoSlice = createSlice({
             // Keep todos whose id does not match the id provided in action.payload.
             state.todos = state.todos.filter((todo) => todo.id !== action.payload)
         },
+        updateTodo: (state, action) => {
+            // Payload se id aur text nikala (Destructuring)
+            const {id, text} = action.payload;
+            const existingTodo = state.todos.find((todo) => todo.id === id);
+            if(existingTodo){
+                existingTodo.text = text;
+            }
+        }
     }
 })
 
 // Components ke liye actions (addTodo, removeTodo) export karo
-export const {addTodo, removeTodo} = todoSlice.actions
+export const {addTodo, removeTodo, updateTodo} = todoSlice.actions
 
 // Store ke liye inka main reducer export karo
 export default todoSlice.reducer
