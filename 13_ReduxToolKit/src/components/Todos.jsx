@@ -4,7 +4,7 @@ import { removeTodo } from '../features/todoSlice'
 function Todos() {
 
     const todos = useSelector(state => state.todos);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch()      //Courier boy yahan bhi aayega
 
     return (
         <section>
@@ -25,3 +25,12 @@ function Todos() {
 }
 
 export default Todos
+
+// Line dekho: useSelector((state) => state.todo.todos)
+// Yeh state.todo.todos kya hai?
+
+// state: Yeh tumhara poora Global Store hai.
+
+// .todo: Yeh wo naam hai jo tumne store.js file mein reducer: { todo: todoReducer } likha tha. (Agar tum wahan tasks: todoReducer likhte, toh yahan state.tasks likhna padta).
+
+// .todos: Yeh wo array hai jo tumne todoSlice.js ki initialState mein define kiya tha (todos: [{id: 1, text: "Hello"}]).
