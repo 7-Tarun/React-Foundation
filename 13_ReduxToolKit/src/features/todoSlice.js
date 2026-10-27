@@ -25,9 +25,9 @@ const todoSlice = createSlice({
         },
         updateTodo: (state, action) => {
             // Payload se id aur text nikala (Destructuring)
-            const {id, text} = action.payload;
+            const { id, text } = action.payload;
             const existingTodo = state.todos.find((todo) => todo.id === id);
-            if(existingTodo){
+            if (existingTodo) {
                 existingTodo.text = text;
             }
         }
@@ -35,7 +35,7 @@ const todoSlice = createSlice({
 })
 
 // Components ke liye actions (addTodo, removeTodo) export karo
-export const {addTodo, removeTodo, updateTodo} = todoSlice.actions
+export const { addTodo, removeTodo, updateTodo } = todoSlice.actions
 
 // Store ke liye inka main reducer export karo
 export default todoSlice.reducer
